@@ -1,0 +1,7 @@
+name: workbook_monorepo
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+dev_dependencies:
+  build_runner: ^2.4.14
+  melos: ^6.3.2

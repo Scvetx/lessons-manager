@@ -1,0 +1,10 @@
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+untranslated-messages-file: untranslated_messages.txt
+nullable-getter: false
+arb-translate-vertex-ai-project-url: https://us-central1-aiplatform.googleapis.com/v1/projects/eco-span-414417/locations/us-central1/publishers/google/models
+arb-translate-model-provider: vertex-ai
+# arb-translate-api-key: YOUR-KEY-HERE
+# OR, you can use in the terminal: arb_translate --api-key $(gcloud auth print-access-token)
+# Check https://pub.dev/packages/arb_translate

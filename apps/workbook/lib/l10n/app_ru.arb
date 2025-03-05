@@ -1,0 +1,83 @@
+{
+  "@@locale": "ru",
+  "labelSave": "Сохранить",
+  "labelEdit": "Редактировать",
+  "labelAdd": "Добавить",
+  "labelChange": "Изменить",
+  "labelDelete": "Удалить",
+  "labelDeactivate": "Деактивировать",
+  "labelNew": "Новый",
+  "labelCard": "Карточка",
+  "labelMy": "Мой",
+  "labelRelated": "Связанный",
+  "labelContinue": "Продолжить",
+  "labelCancel": "Отмена",
+  "labelPleaseTryAgain": "Пожалуйста, попробуйте снова.",
+
+
+  "labelLogIn": "Войти",
+  "labelLogOut": "Выйти",
+  "labelRegistration": "Новая учетная запись учителя",
+  "labelCreateAccount": "Создать учетную запись",
+  "labelInputNameHintText": "Введите ваше имя",
+  "labelInputEmailHintText": "Введите ваш email",
+  "labelInputPasswordHintText": "Введите ваш пароль",
+  "labelInputNewPasswordHintText": "Введите новый пароль",
+  "labelInputOldPasswordHintText": "Введите старый пароль",
+  "labelEnterNewPassword": "Введите ваш новый пароль ниже:",
+  "labelNewPasswordDescription": "При первом входе измените временный пароль, предоставленный вашим учителем:",
+  "labelRegisterButton": "Зарегистрироваться как учитель >",
+  "labelLoginButton": "Войти >",
+  "userErrFailedToCreateUser": "Не удалось создать пользователя.",
+
+
+  "labelNewStudentPopupTitle": "Временный пароль студента",
+  "labelNewStudentPopupText": "Сохраните указанные ниже учетные данные и отправьте их вашему студенту. \nСтудент изменит пароль после первого входа.",
+  "labelUserLogin": "Логин",
+
+
+  "cobjectFieldLabelName": "Название",
+  "cobjectFieldLabelDescription": "Описание",
+
+
+  "courseLabel": "Курс",
+  "coursesLabelPlural": "Курсы",
+  "courseErrFailedToOpenRelatedStudents": "Не удалось открыть список студентов.",
+  "courseErrFailedToOpenRelatedLessons": "Не удалось открыть список уроков.",
+
+
+  "lessonLabel": "Урок",
+  "lessonsLabelPlural": "Уроки",
+
+  "languageLabelLevel": "Уровень",
+  "languageLabelGoal": "Цель",
+  "languageErrLevelGreaterThanGoal": "Текущий уровень знания языка не может быть выше, чем целевой уровень.",
+
+
+  "profileLabel": "Профиль",
+  "profileFieldLabelName": "Имя",
+  "profileFieldLabelEmail": "Email",
+  "profileFieldLabelPassword": "Пароль",
+  "profileFieldLabelPhoto": "Фото",
+  "profileErrEmailIsNotValid": "Неверный формат Email",
+  "profileErrFailedToLoadPhoto": "Не удалось загрузить фото.",
+
+
+  "studentLabel": "Студент",
+  "studentsLabelPlural": "Студенты",
+  "studentErrDeactivateUserFailed": "Не удалось деактивировать пользователя. Пожалуйста, попробуйте еще раз.",
+
+
+  "teacherLabel": "Преподаватель",
+
+
+  "errNoState": "Не удалось определить состояние",
+  "errFieldNotEntered": "не введено!",
+  "errNotLoggedIn": "Пользователь не вошел в систему!",
+  "errFailedToView": "Не удалось открыть",
+  "errFailedToAdd": "Не удалось добавить",
+  "errFailedToLoad": "Не удалось загрузить",
+  "errFailedToSave": "Не удалось сохранить",
+  "errFailedToGetData": "Не удалось получить данные.",
+  "errFailedToDelete": "Не удалось удалить"
+}

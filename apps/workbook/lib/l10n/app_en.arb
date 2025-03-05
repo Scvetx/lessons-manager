@@ -1,0 +1,85 @@
+{
+  "@@locale": "en",
+  "labelSave": "Save",
+  "labelEdit": "Edit",
+  "labelAdd": "Add a",
+  "labelEdit": "Edit",
+  "labelChange": "Change",
+  "labelDelete": "Delete the",
+  "labelDeactivate": "Deactivate the",
+  "labelNew": "New",
+  "labelCard": "Card",
+  "labelMy": "My",
+  "labelRelated": "Related",
+  "labelContinue": "Continue",
+  "labelCancel": "Cancel",
+  "labelPleaseTryAgain": "Please try again",
+
+
+  "labelLogIn": "Log In",
+  "labelLogOut": "Log Out",
+  "labelRegistration": "New Teacher Account",
+  "labelCreateAccount": "Create an Account",
+  "labelInputNameHintText": "Enter your name",
+  "labelInputEmailHintText": "Enter your email",
+  "labelInputPasswordHintText": "Enter your password",
+  "labelInputNewPasswordHintText": "Enter new password",
+  "labelInputOldPasswordHintText": "Enter old password",
+  "labelEnterNewPassword": "Enter your new password below:",
+  "labelNewPasswordDescription": "At the time of your first login change the temporary password provided by your teacher:",
+  "labelRegisterButton": "Sign Up as a Teacher >",
+  "labelLoginButton": "Log in >",
+  "userErrFailedToCreateUser": "Failed to create user.",
+
+
+  "labelNewStudentPopupTitle": "Student's Temporary Password",
+  "labelNewStudentPopupText": "Save the credentials below and send to your student. \nThe student will change the password after the first login.",
+  "labelUserLogin": "Login",
+
+
+  "cobjectFieldLabelName": "Name",
+  "cobjectFieldLabelDescription": "Description",
+
+
+  "courseLabel": "Course",
+  "coursesLabelPlural": "Courses",
+  "courseErrFailedToOpenRelatedStudents": "Failed to open related students.",
+  "courseErrFailedToOpenRelatedLessons": "Failed to open related lessons.",
+
+
+  "lessonLabel": "Lesson",
+  "lessonsLabelPlural": "Lessons",
+
+
+  "languageLabelLevel": "Level",
+  "languageLabelGoal": "Goal",
+  "languageErrLevelGreaterThanGoal": "Language level can't be greater than goal",
+
+
+  "profileLabel": "Profile",
+  "profileFieldLabelName": "Name",
+  "profileFieldLabelEmail": "Email",
+  "profileFieldLabelPassword": "Password",
+  "profileFieldLabelPhoto": "Photo",
+  "profileErrEmailIsNotValid": "Wrong Email format",
+  "profileErrFailedToLoadPhoto": "Failed to load photo.",
+
+
+  "studentLabel": "Student",
+  "studentsLabelPlural": "Students",
+  "studentErrDeactivateUserFailed": "Failed to deactivate user. Please, try again.", 
+
+
+  "teacherLabel": "Teacher",
+
+
+  "errNoState": "Unable to define state",
+  "errFieldNotEntered": "is not entered!",
+  "errNotLoggedIn": "User is not logged in!",
+  "errFailedToView": "Failed to view a",
+  "errFailedToAdd": "Failed to add",
+  "errFailedToLoad": "Failed to load",
+  "errFailedToSave": "Failed to save",
+  "errFailedToGetData": "Failed to get data.",
+  "errFailedToDelete": "Failed to delete"
+}
