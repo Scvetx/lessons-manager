@@ -88,8 +88,13 @@ dependencies:
 
 
 dev_dependencies:
+  # START ----- TEST RELATED -----
   flutter_test:
     sdk: flutter
+  mocktail: ^1.0.0
+  golden_toolkit: ^0.15.0
+  firebase_core_platform_interface: ^5.4.0  # Added for platform-specific interface (mock data in tests)
+  # END ----- TEST RELATED -----
 
   # START ----- COMMON APP IMPLEMENTATION -----
 
