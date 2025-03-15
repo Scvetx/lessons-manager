@@ -5,6 +5,7 @@ import '../../../../../../core/getit/injection.dart';
 import '../../../../../../core/models/domain/scheme/cfield.dart';
 import '../../../../../../core/models/domain/scheme/cobject_form_scheme.dart';
 import '../../../../../../core/utils/labels.dart';
+import '../../../../../../core/utils/utils.dart';
 
 /// Scheme of course fields on the edit form
 
@@ -15,7 +16,8 @@ class ProfileFormScheme {
 
   late final TextCFieldScheme nameFieldScheme = TextCFieldScheme(
     key: CObjectFormScheme.fNameKey, 
-    label: getIt<Labels>().l10n.cobjectFieldLabelName,
+    label: Utils.isTest() ? CObjectFormScheme.fNameKey : 
+                            getIt<Labels>().l10n.cobjectFieldLabelName,
     maxNumberOfLines: CObjectFormScheme.fNameMaxLines,
     maxLength: fNameLength,
   );
@@ -27,7 +29,8 @@ class ProfileFormScheme {
 
   late final TextCFieldScheme emailFieldScheme = TextCFieldScheme(
     key: fEmailKey, 
-    label: getIt<Labels>().l10n.profileFieldLabelEmail,
+    label: Utils.isTest() ? fEmailKey : 
+                            getIt<Labels>().l10n.profileFieldLabelEmail,
     maxLength: fEmailLength,
     maxNumberOfLines: fEmailMaxLines,
   );
@@ -38,7 +41,8 @@ class ProfileFormScheme {
 
   late final TextCFieldScheme passwordFieldScheme = TextCFieldScheme(
     key: fPasswordKey, 
-    label: getIt<Labels>().l10n.profileFieldLabelPassword,
+    label: Utils.isTest() ? fPasswordKey : 
+                            getIt<Labels>().l10n.profileFieldLabelPassword,
     maxNumberOfLines: 1,
     maxLength: fPasswordMaxLengt,
   );
@@ -48,6 +52,7 @@ class ProfileFormScheme {
 
   late final PhotoFieldScheme photoFieldScheme = PhotoFieldScheme(
     key: fPhotoKey, 
-    label: getIt<Labels>().l10n.profileFieldLabelPhoto,
+    label: Utils.isTest() ? fPhotoKey : 
+                            getIt<Labels>().l10n.profileFieldLabelPhoto,
   );
 }

@@ -3,6 +3,7 @@ import 'package:injectable/injectable.dart';
 import '../../../../../../core/getit/injection.dart';
 import '../../../../../../core/models/domain/scheme/cfield.dart';
 import '../../../../../../core/utils/labels.dart';
+import '../../../../../../core/utils/utils.dart';
 
 /// Scheme of student fields on the edit form
 @lazySingleton
@@ -12,7 +13,8 @@ class StudentFormScheme {
 
   final goalFieldScheme = LanguageLevelFieldScheme(
     key: fGoalKey, 
-    label: getIt<Labels>().l10n.languageLabelGoal,
+    label: Utils.isTest() ? fGoalKey : 
+                            getIt<Labels>().l10n.languageLabelGoal,
   );
 
   // language level field
@@ -20,7 +22,8 @@ class StudentFormScheme {
 
   final languageLevelFieldScheme = LanguageLevelFieldScheme(
     key: fLanguageLevelKey, 
-    label: getIt<Labels>().l10n.languageLabelLevel,
+    label: Utils.isTest() ? fLanguageLevelKey : 
+                            getIt<Labels>().l10n.languageLabelLevel,
   );
 
   // courses ids
@@ -28,6 +31,7 @@ class StudentFormScheme {
 
   final coursesIdsFieldScheme = IdsListFieldScheme(
     key: fCoursesIdsKey, 
-    label: getIt<Labels>().l10n.coursesLabelPlural,
+    label: Utils.isTest() ? fCoursesIdsKey : 
+                            getIt<Labels>().l10n.coursesLabelPlural,
   );
 }

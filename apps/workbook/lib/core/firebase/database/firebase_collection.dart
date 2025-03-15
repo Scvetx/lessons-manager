@@ -1,6 +1,7 @@
 
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../../getit/injection.dart';
 import '../../models/database/dbobject.dart';
 import '../../models/database/scheme/dbobject_scheme.dart';
 import 'query_filter.dart';
@@ -9,7 +10,7 @@ import 'query_filter.dart';
 /// (database custom objects)
 class FirebaseCollection {
   FirebaseCollection({required this.collectionName}) {
-    db = FirebaseFirestore.instance;
+    db = getIt<FirebaseFirestore>();
     collection = db.collection(collectionName);
   }
   
