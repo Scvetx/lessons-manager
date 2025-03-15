@@ -9,12 +9,15 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:cloud_firestore/cloud_firestore.dart' as _i974;
+import 'package:firebase_auth/firebase_auth.dart' as _i59;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:workbook/core/firebase/push_notifications/handlers/local_notifications.dart'
     as _i566;
 import 'package:workbook/core/firebase/push_notifications/handlers/push_notifications.dart'
     as _i782;
+import 'package:workbook/core/getit/injectable.module.dart' as _i899;
 import 'package:workbook/core/models/domain/scheme/cobject_form_scheme.dart'
     as _i917;
 import 'package:workbook/core/navigation/routes/app_router.dart' as _i784;
@@ -60,23 +63,27 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
+    final injectableModule = _$InjectableModule();
     gh.lazySingleton<_i784.AppRouter>(() => _i784.AppRouter());
     gh.lazySingleton<_i1028.ContextVariables>(() => _i1028.ContextVariables());
     gh.lazySingleton<_i602.Labels>(() => _i602.Labels());
     gh.lazySingleton<_i917.CObjectFormScheme>(() => _i917.CObjectFormScheme());
+    gh.lazySingleton<_i59.FirebaseAuth>(() => injectableModule.firebaseAuth);
+    gh.lazySingleton<_i974.FirebaseFirestore>(
+        () => injectableModule.firebaseFirestore);
     gh.lazySingleton<_i566.LocalNotifications>(
         () => _i566.LocalNotifications());
     gh.lazySingleton<_i782.PushNotifications>(() => _i782.PushNotifications());
     gh.lazySingleton<_i5.CourseDbService>(() => _i5.CourseDbService());
     gh.lazySingleton<_i913.CourseFormScheme>(() => _i913.CourseFormScheme());
-    gh.lazySingleton<_i874.FirebaseAuthRepository>(
-        () => _i874.FirebaseAuthRepository());
     gh.lazySingleton<_i496.TeacherDbService>(() => _i496.TeacherDbService());
     gh.lazySingleton<_i764.StudentDbService>(() => _i764.StudentDbService());
     gh.lazySingleton<_i438.StudentFormScheme>(() => _i438.StudentFormScheme());
     gh.lazySingleton<_i990.ProfileFormScheme>(() => _i990.ProfileFormScheme());
     gh.lazySingleton<_i79.LessonDbService>(() => _i79.LessonDbService());
     gh.lazySingleton<_i446.LessonFormScheme>(() => _i446.LessonFormScheme());
+    gh.lazySingleton<_i874.FirebaseAuthRepository>(
+        () => _i874.FirebaseAuthRepository(gh<_i59.FirebaseAuth>()));
     gh.lazySingleton<_i618.TeacherDbRepository>(
         () => _i618.TeacherDbRepository(gh<_i496.TeacherDbService>()));
     gh.lazySingleton<_i328.StudentDbRepository>(
@@ -98,3 +105,5 @@ extension GetItInjectableX on _i174.GetIt {
     return this;
   }
 }
+
+class _$InjectableModule extends _i899.InjectableModule {}

@@ -8,7 +8,9 @@ import 'package:random_password_generator/random_password_generator.dart';
 
 @lazySingleton
 class FirebaseAuthRepository {  
-  FirebaseAuth get auth => FirebaseAuth.instance;
+  FirebaseAuthRepository(this.auth);
+  final FirebaseAuth auth;
+
   User? get user => auth.currentUser;
   String? get userId => user?.uid;
   bool get loggedIn => auth.currentUser != null;
