@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../l10n/l10n.dart';
+import '../../l10n/app_localizations.dart';
 
 /// Stores Localizations values for the current App launch
 /// Restart App to get updated localization values.
