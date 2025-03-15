@@ -18,7 +18,7 @@ class SplashScreen extends ConsumerWidget {
   });
 
   // init l10n for the current app launch
-  Future<void> _initLabels(BuildContext context) async {
+  void _initLabels(BuildContext context) {
     getIt<Labels>().init(context);
   }
 
