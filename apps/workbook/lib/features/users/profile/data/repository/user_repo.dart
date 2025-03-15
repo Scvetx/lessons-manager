@@ -81,7 +81,7 @@ class UserRepository {
 
   /// Create stream of current user profile
   Future<void> _streamUserProfile(String userId) async {
-    if (kDebugMode) print('>>> stream new user data ');
+    if (kDebugMode) print('>>> stream new user data $userId');
     // Get teacher repository
     final teacherStream = teacherRepo.streamTeacherProfile(userId);
     teacher = await teacherStream.first;
