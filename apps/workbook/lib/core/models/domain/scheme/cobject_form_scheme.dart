@@ -2,6 +2,7 @@ import 'package:injectable/injectable.dart';
 
 import '../../../getit/injection.dart';
 import '../../../utils/labels.dart';
+import '../../../utils/utils.dart';
 import 'cfield.dart';
 
 /// Scheme of CObject fields on the edit form
@@ -14,7 +15,8 @@ class CObjectFormScheme {
 
   final nameFieldScheme = TextCFieldScheme(
     key: fNameKey, 
-    label: getIt<Labels>().l10n.cobjectFieldLabelName,
+    label: Utils.isTest() ? fNameKey : 
+                            getIt<Labels>().l10n.cobjectFieldLabelName,
     maxLength: fNameMaxLength,
     maxNumberOfLines: fNameMaxLines,
   );

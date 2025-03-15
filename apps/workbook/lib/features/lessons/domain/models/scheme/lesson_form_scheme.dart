@@ -4,6 +4,7 @@ import '../../../../../core/getit/injection.dart';
 import '../../../../../core/models/domain/scheme/cfield.dart';
 import '../../../../../core/models/domain/scheme/cobject_form_scheme.dart';
 import '../../../../../core/utils/labels.dart';
+import '../../../../../core/utils/utils.dart';
 
 /// Scheme of lesson fields on the edit form
 @lazySingleton
@@ -12,7 +13,8 @@ class LessonFormScheme {
   static const int fNameLength = 100;
   final nameFieldScheme = TextCFieldScheme(
     key: CObjectFormScheme.fNameKey, 
-    label: getIt<Labels>().l10n.cobjectFieldLabelName,
+    label: Utils.isTest() ? CObjectFormScheme.fNameKey : 
+                            getIt<Labels>().l10n.cobjectFieldLabelName,
     maxNumberOfLines: CObjectFormScheme.fNameMaxLines,
     // ignore: avoid_redundant_argument_values
     maxLength: fNameLength,
@@ -24,7 +26,8 @@ class LessonFormScheme {
 
   final descriptionFieldScheme = TextCFieldScheme(
     key: fDescriptionKey, 
-    label: getIt<Labels>().l10n.cobjectFieldLabelDescription,
+    label: Utils.isTest() ? CObjectFormScheme.fNameKey : 
+                            getIt<Labels>().l10n.cobjectFieldLabelDescription,
     maxLength: fDescriptionLength,
   );
 
@@ -33,7 +36,8 @@ class LessonFormScheme {
 
   final languageLevelFieldScheme = LanguageLevelFieldScheme(
     key: fLanguageLevelKey, 
-    label: getIt<Labels>().l10n.languageLabelLevel,
+    label: Utils.isTest() ? CObjectFormScheme.fNameKey : 
+                            getIt<Labels>().l10n.languageLabelLevel,
   );
 
   // courseId field
