@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/navigation/routes/app_router.dart';
-import '../../../l10n/l10n.dart';
+import '../../../l10n/app_localizations.dart';
 
 List<PopupMenuItem> teacherMenu (AppLocalizations l10n) => [
   // test 
