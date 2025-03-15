@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +9,9 @@ import '../getit/injection.dart';
 import '../navigation/routes/app_router.dart';
 
 class Utils {
+  /// true if flutter tests are running
+  static bool isTest() => Platform.environment.containsKey('FLUTTER_TEST');
+
   /// all active snackbars
   static final List<Flushbar> _activeSnackBars = [];
 
