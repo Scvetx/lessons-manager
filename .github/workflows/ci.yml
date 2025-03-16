@@ -1,0 +1,67 @@
+name: Flutter CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+env:
+  MAIN_BRANCH: 'main'
+  DEVELOPMENT_BRANCH: 'develop'
+
+jobs:
+  flutter_build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.29.0
+      - run: flutter --version
+
+      - name: Cache Flutter dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.pub-cache
+            ${{ runner.tool_cache }}/flutter
+          key: ${{ runner.os }}-flutter-${{ hashFiles('**/pubspec.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-flutter-
+
+      - name: Install Melos
+        run: dart pub global activate melos
+
+      - name: Install dependencies using Melos
+        run: melos bootstrap
+
+# ---- run tests -----------------------------
+      - name: Run tests
+        run: melos test
+
+# ---- build app -----------------------------
+      # - name: Build APK (Android) - production
+      #   if: github.ref == 'refs/heads/${{ env.MAIN_BRANCH }}'  # for development branch
+      #   run: melos build-android-prod # Adjust this to match your project build command
+
+      # - name: Build iOS - production
+      #   if: github.ref == 'refs/heads/${{ env.MAIN_BRANCH }}'  # for development branch
+      #   run: melos build-ios-prod # Adjust this if you need to build for iOS
+
+      # - name: Build APK (Android) - development
+      #   if: github.ref == 'refs/heads/${{ env.DEVELOPMENT_BRANCH }}'  # for development branch
+      #   run: melos build-android-dev # Adjust this to match your project build command
+
+      # - name: Build iOS - development
+      #   if: github.ref == 'refs/heads/${{ env.DEVELOPMENT_BRANCH }}'  # for development branch
+      #   run: melos build-ios-dev # Adjust this if you need to build for iOS

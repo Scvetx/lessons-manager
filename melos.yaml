@@ -27,6 +27,22 @@ scripts:
     run: melos exec -- "flutter format . --set-exit-if-changed"
     description: Run `flutter format .` in all packages
 
-  # test:
-  #   run: melos exec --dir-exists=test -- "flutter test"
-  #   description: Run `flutter test` in all packages
+  test:
+    description: Run tests across the monorepo
+    run: melos exec --dir-exists=test -- "flutter test"
+
+  build-android-prod:
+    description: Build Android app for production
+    run: flutter build apk --flavor production -t lib/main_production.dart --release
+
+  build-android-dev:
+    description: Build the Android app for development
+    run: flutter build apk --flavor development -t lib/main_development.dart --release
+
+  build-ios-prod:
+    description: Build the iOS app for production
+    run: flutter build ios --release
+
+  build-ios-dev:
+    description: Build the iOS app for development
+    run: flutter build ios --release
