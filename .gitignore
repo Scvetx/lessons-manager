@@ -46,3 +46,10 @@ pubspec_overrides.yaml
 
 cost_per_user_session.txt
 todo.txt
+
+# Firebase related
+apps/workbook/firebase.json
+google-services.json
+GoogleService-Info.plist
+apps/workbook/ios/firebase_app_id_file.json
+apps/workbook/lib/firebase_options.dart
