@@ -52,6 +52,8 @@ dependencies:
   firebase_analytics: ^11.4.4
 
   # --- architecture related ---
+  # fixes androind build apk issue in flutter 3.29.0
+  flutter_plugin_android_lifecycle: 2.0.27
   # getit
   injectable: ^2.5.0
   get_it: ^8.0.3

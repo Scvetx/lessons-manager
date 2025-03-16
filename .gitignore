@@ -47,6 +47,9 @@ pubspec_overrides.yaml
 cost_per_user_session.txt
 todo.txt
 
+# Android related
+apps/workbook/android/app/.cxx
+
 # Firebase related
 apps/workbook/firebase.json
 google-services.json
